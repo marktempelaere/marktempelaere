@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+img.tablet, img.desktop { /* Mobile First */
+	display: none;
+}
+
+@media (min-width: 48rem) { /* Media query for tablets > 768px (48rem) */
+	img.smartphone {
+		display: none;
+	}
+
+	img.tablet {
+		display: block;
+	}
+}
+
+@media (min-width: 64rem) { /* Media query for desktops > 1024px (64rem) */
+	img.tablet {
+		display: none;
+	}
+
+	img.desktop {
+		display: block;
+	}
+}
+
